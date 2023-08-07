@@ -107,7 +107,7 @@ def send_help(chat_id, text, keyboard=None):
 
     if not keyboard:
         kb = paginate_modules(0, HELPABLE, "help")
-        kb.append([InlineKeyboardButton(text='Support', url='https://t.me/TheBotsSupport'),
+        kb.append([InlineKeyboardButton(text='Support', url='https://t.me/AndreaSupport_Chat'),
         InlineKeyboardButton(text='Back', callback_data='start_back'), InlineKeyboardButton(text="Try inline", switch_inline_query_current_chat="")])
         keyboard = InlineKeyboardMarkup(kb)
     dispatcher.bot.send_message(
@@ -310,7 +310,7 @@ def help_button(update: Update, context: CallbackContext):
             help_buttons.append(
                 [
                     InlineKeyboardButton(text="Back", callback_data="help_back"),
-                    InlineKeyboardButton(text='Support', url='https://t.me/TheBotsSupport')
+                    InlineKeyboardButton(text='Support', url='https://t.me/AndreaSupport_Chat')
                 ]
                     )
             query.message.edit_text(
@@ -324,7 +324,7 @@ def help_button(update: Update, context: CallbackContext):
             kb = paginate_modules(curr_page - 1, HELPABLE, "help")
             kb.append(
                 [
-                    InlineKeyboardButton(text='Support', url='https://t.me/TheBotsSupport'),
+                    InlineKeyboardButton(text='Support', url='https://t.me/AndreaSupport_Chat'),
                     InlineKeyboardButton(text='Back', callback_data='start_back'),
                     InlineKeyboardButton(text="Try inline", switch_inline_query_current_chat="")
                 ]
@@ -340,7 +340,7 @@ def help_button(update: Update, context: CallbackContext):
             kb = paginate_modules(next_page + 1, HELPABLE, "help")
             kb.append(
                 [
-                    InlineKeyboardButton(text='Support', url='https://t.me/TheBotsSupport'),
+                    InlineKeyboardButton(text='Support', url='https://t.me/AndreaSupport_Chat'),
                     InlineKeyboardButton(text='Back', callback_data='start_back'),
                     InlineKeyboardButton(text="Try inline", switch_inline_query_current_chat="")
                 ]
@@ -355,7 +355,7 @@ def help_button(update: Update, context: CallbackContext):
             kb = paginate_modules(0, HELPABLE, "help")
             kb.append(
                 [
-                    InlineKeyboardButton(text='Support', url='https://t.me/TheBotsSupport'),
+                    InlineKeyboardButton(text='Support', url='https://t.me/AndreaSupport_chat'),
                     InlineKeyboardButton(text='Back', callback_data='start_back'),
                     InlineKeyboardButton(text="Try inline", switch_inline_query_current_chat="")
                 ]
@@ -645,7 +645,7 @@ def donate(update: Update, _: CallbackContext):
 
 @kigcmd(command='support')
 def support(update: Update, context: CallbackContext):
-    supporttext = "Join the support chat\n@TheBotsSupport\n\nGet the latest news\n@LukeBots"
+    supporttext = "Join the support chat\n@AndreaSupport_chat\n\nGet the latest news\n@LukeBots"
     update.effective_message.reply_text(supporttext)
 
 
