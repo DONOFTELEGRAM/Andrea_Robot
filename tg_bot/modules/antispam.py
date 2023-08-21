@@ -578,7 +578,7 @@ def __user_info__(user_id):
         user = sql.get_gbanned_user(user_id)
         if user.reason:
             text += f"\nㅤ<b>Reason:</b> <code>{html.escape(user.reason)}</code>"
-        text += "\nㅤ<b>Appeal Chat:</b> @TheBotsSupport"
+        text += "\nㅤ<b>Appeal Chat:</b> @AndreaSupport_Chat"
     else:
         text = ""
     return text
