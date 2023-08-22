@@ -2,7 +2,6 @@
 # pip install uvicorn[standard]
 # uvicorn api:app --reload
 
-
 from fastapi import FastAPI
 import tg_bot.modules.sql.antispam_sql as sql1
 import tg_bot.modules.sql.blacklistusers_sql as sql2
