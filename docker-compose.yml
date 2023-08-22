@@ -3,7 +3,7 @@ version: "3.9"
 services:
   andrea:
     build: .
-    image: andrea:latest
+    image: andrea:${TAG}
     container_name: andrea
     network_mode: host
     pull_policy: never
