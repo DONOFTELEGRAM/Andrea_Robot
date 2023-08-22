@@ -223,7 +223,7 @@ def start_buttons(context, chat):
         [
             InlineKeyboardButton(
                 text=gs(chat.id, "support_chat_link_btn"),
-                url='https://t.me/TheBotsSupport',
+                url='https://t.me/AndreaSupport_Chat',
             ),
             InlineKeyboardButton(
                 text=gs(chat.id, "add_bot_to_group_btn"),
