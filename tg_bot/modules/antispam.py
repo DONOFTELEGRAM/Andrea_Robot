@@ -259,7 +259,7 @@ def gban(update: Update, context: CallbackContext):  # sourcery no-metrics
             "#GBAN"
             "You have been marked as Malicious and as such have been banned from any future groups we manage."
             f"\n<b>Reason:</b> <code>{html.escape(reason)}</code>"
-            f"\n</b>Appeal Chat:</b> @AndreaSupport_Chat",
+            f"\n</b>Appeal Chat:</b> @AnriyaSupport",
             parse_mode=ParseMode.HTML,
         )
     except:
@@ -578,7 +578,7 @@ def __user_info__(user_id):
         user = sql.get_gbanned_user(user_id)
         if user.reason:
             text += f"\nㅤ<b>Reason:</b> <code>{html.escape(user.reason)}</code>"
-        text += "\nㅤ<b>Appeal Chat:</b> @AndreaSupport_Chat"
+        text += "\nㅤ<b>Appeal Chat:</b> @AnriyaSupport"
     else:
         text = ""
     return text
