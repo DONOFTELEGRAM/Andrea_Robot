@@ -40,7 +40,7 @@ class AntiSpam:
             self.min_limit,
             self.hour_limit,
             self.daily_limit,
-            bucket_class=InMemoryBucket,
+            bucket=InMemoryBucket,
         )
 
     @staticmethod
