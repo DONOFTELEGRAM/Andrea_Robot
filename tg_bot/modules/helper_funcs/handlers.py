@@ -8,7 +8,7 @@ from pyrate_limiter import (
     Duration,
     Rate,
     Limiter,
-    MemoryListBucket,
+    InMemoryBucket,
 )
 import tg_bot.modules.sql.blacklistusers_sql as sql
 
@@ -40,7 +40,7 @@ class AntiSpam:
             self.min_limit,
             self.hour_limit,
             self.daily_limit,
-            bucket_class=MemoryListBucket,
+            bucket_class=InMemoryBucket,
         )
 
     @staticmethod
