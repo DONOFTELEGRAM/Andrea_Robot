@@ -524,9 +524,9 @@ def stats(update, context):
                         "\n*Bot statistics*:\n"
                         + "\n".join(mod.__stats__() for mod in STATS)
                     )
-                    + "\n\n⍙ [GitHub](https://github.com/itsLuuke) ⍚ [OdinRobot](https://github.com/OdinRobot) \n\n"
+                    # + "\n\n⍙ [GitHub](https://github.com/itsLuuke) ⍚ [OdinRobot](https://github.com/OdinRobot) \n\n"
                 )
-                + "╘══「 by [ルーク](https://t.me/itsLuuke) 」\n"
+                + "╘══「 by [U R](https://t.me/LowProfileOne) 」\n"
             ),
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(kb),
