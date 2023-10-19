@@ -227,7 +227,7 @@ def info(update: Update, context: CallbackContext):  # sourcery no-metrics
         text, parse_mode=ParseMode.HTML, disable_web_page_preview=True
     )
 
-def get_user_info(user, chat, full_info=False):
+def get_user_info(user, chat, full_info=True):
     bot = dispatcher.bot
     text = (
         f"<b>User Info:</b>\n"
@@ -247,7 +247,7 @@ def get_user_info(user, chat, full_info=False):
     if user.id == OWNER_ID:
         text += "\nㅤ<b>User status:</b> <a href='https://t.me/{}?start=nations'>Owner</a>".format(escape_markdown(dispatcher.bot.username))
     elif user.id == SYS_ADMIN:
-        text += ""
+        text += "\nㅤ<b>User status:</b> <a href='https://t.me/{}?start=nations'>Co-owner, Dev, Maintainer</a>".format(escape_markdown(dispatcher.bot.username))
     elif user.id in DEV_USERS:
         text += "\nㅤ<b>User status:</b> <a href='https://t.me/{}?start=nations'>Developer</a>".format(escape_markdown(dispatcher.bot.username))
     elif user.id in SUDO_USERS:
@@ -514,7 +514,7 @@ def stats(update, context):
             "\n*╒═══「 Bot statistics: 」*\n"
             + "\n".join([mod.__stats__() for mod in STATS])
             # + "\n\n⍙ [GitHub](https://github.com/itsLuuke) ⍚ [OdinRobot](https://github.com/OdinRobot) \n\n"
-            + "\n\n╘══「 by [U R](https://t.me/LowProfileOne) 」\n",
+            + "\n\n╘══「 by [TheWatchDog](https://t.me/TheWatchDog) 」\n",
         parse_mode=ParseMode.MARKDOWN, reply_markup=InlineKeyboardMarkup(kb), disable_web_page_preview=True)
     except BaseException:
         update.effective_message.reply_text(
@@ -524,9 +524,9 @@ def stats(update, context):
                         "\n*Bot statistics*:\n"
                         + "\n".join(mod.__stats__() for mod in STATS)
                     )
-                    + "\n\n⍙ [GitHub](https://github.com/itsLuuke) ⍚ [OdinRobot](https://github.com/OdinRobot) \n\n"
+                    # + "\n\n⍙ [GitHub](https://github.com/itsLuuke) ⍚ [OdinRobot](https://github.com/OdinRobot) \n\n"
                 )
-                + "╘══「 by [ルーク](https://t.me/itsLuuke) 」\n"
+                + "╘══「 by [TheWatchDog](https://t.me/TheWatchDog) 」\n"
             ),
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(kb),

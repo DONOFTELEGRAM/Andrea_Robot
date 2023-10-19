@@ -152,6 +152,7 @@ def start(update: Update, context: CallbackContext):  # sourcery no-metrics
                     OWNER_ID,
                 ),
                 parse_mode=ParseMode.MARKDOWN,
+                disable_web_page_preview=True,
                 reply_markup=InlineKeyboardMarkup(
                     start_buttons(context, chat)
                 ),
@@ -205,6 +206,7 @@ def start(update: Update, context: CallbackContext):  # sourcery no-metrics
                     OWNER_ID,
                 ),
                 parse_mode=ParseMode.MARKDOWN,
+                disable_web_page_preview=True,
                 reply_markup=InlineKeyboardMarkup(
                     start_buttons(context, chat)
                 ),
