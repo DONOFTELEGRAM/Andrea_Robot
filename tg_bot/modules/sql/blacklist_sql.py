@@ -167,7 +167,7 @@ def __load_chat_blacklists():
         all_filters = SESSION.query(BlackListFilters).all()
         if all_filters:
             for x in all_filters:
-            CHAT_BLACKLISTS[x.chat_id] += [(x.trigger, x.trig_act)]
+                CHAT_BLACKLISTS[x.chat_id] += [(x.trigger, x.trig_act)]
         else:
             return 0
 
